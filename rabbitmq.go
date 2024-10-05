@@ -51,11 +51,11 @@ func DeclareQueue(queueName string, conn *amqp.Connection) error {
 	return err
 }
 
-func NewPublisherRMQ(conn *amqp.Connection) RabbitMQPublisher {
+func NewPublisher(conn *amqp.Connection) RabbitMQPublisher {
 	return RabbitMQPublisher{conn}
 }
 
-func NewConsumerRMQ(conn *amqp.Connection) RabbitMQConsumer {
+func NewConsumer(conn *amqp.Connection) RabbitMQConsumer {
 	return RabbitMQConsumer{conn}
 }
 
